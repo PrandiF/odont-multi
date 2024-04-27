@@ -1,0 +1,166 @@
+.two-columns-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.two-columns-grid > * {
+  box-sizing: border-box;
+  padding: 10px;
+  flex: 1 0 50%;
+  max-width: 50%;
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-content {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    border-radius: 15px;
+    width: 520px;
+    height: 624px;
+    display: flex;
+    margin: auto;
+  }
+}
+.modal-calendly {
+  position: relative;
+}
+.buttonBack {
+  box-shadow: #000;
+  position: absolute;
+  top: 3%;
+  left: 0;
+  background-color: transparent;
+  color: #fff;
+  fill: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.buttonInicio {
+  display: none;
+}
+.modal-header {
+  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .two-columns-grid > * {
+    flex: 1 0 100%; /* Cambiar el tamaño de las columnas a 100% en dispositivos más pequeños */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    padding: 10%;
+    .logo {
+      width: 30%;
+      height: 30%;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+//Preguntar lucas
+@media (min-width: 769px) {
+  .closeModalButton {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .closeModalButton {
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .headerContainer {
+    position: absolute;
+    display: flex;
+    width: 83%;
+    justify-content: flex-end;
+    margin-bottom: 12%;
+    background-color: transparent;
+  }
+}
+
+//Mostrar Lucas
+@media (max-width: 648px) {
+  .modalFlex {
+    .buttonBack {
+      display: none;
+    }
+    .buttonInicio {
+      display: flex;
+      position: fixed;
+      border: none;
+      border-radius: 10px;
+      top: 20%;
+      right: 3%;
+      // background-color: transparent;
+      span {
+        mix-blend-mode: difference;
+        color: #ffffff;
+      }
+    }
+  }
+}
+@media (max-width: 510px) {
+  .modal-content {
+    padding: 0;
+    .headerContainer {
+      width: 93%;
+    }
+    .closeModalButton {
+      position: sticky;
+      width: 25px;
+      height: 25px;
+      margin-top: 15%;
+      padding: 0;
+      color: #fff;
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+      height: 400px;
+      margin-top: 0;
+      object-fit: contain;
+    }
+  }
+  .modalFlex {
+    .buttonInicio {
+      top: 20%;
+    }
+  }
+}

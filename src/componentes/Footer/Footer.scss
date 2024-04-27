@@ -1,0 +1,234 @@
+.footer-back {
+  background: -webkit-linear-gradient(bottom, #00000099 70%, #5f5e5ec9);
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .designedBy {
+    margin: 0;
+    z-index: 9999;
+    color: rgb(156, 156, 156);
+    text-align: center;
+    padding: 1rem;
+    background: (#0000001f);
+    span {
+      color: white;
+    }
+  }
+  .footer-desktop {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+    .footIzq {
+      display: flex;
+      flex-direction: row;
+      width: 35rem;
+      align-items: center;
+      justify-content: center;
+      .phone-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+    .logo-footer {
+      height: 150px;
+      width: 150px;
+    }
+    .footDer {
+      display: flex;
+      flex-direction: row;
+      width: 35rem;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  .nav-footer {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: #9a9a9a;
+    a {
+      text-decoration: none;
+      margin: 18px;
+      color: #9a9a9a;
+      .phone-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    h6 {
+      list-style: none;
+      text-decoration: none;
+      font-size: 1em;
+      font-family: "Roboto", sans-serif;
+      font-weight: 800;
+      color: white;
+    }
+    .rightN {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .leftN {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .gmail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    h6 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 1219px) {
+  .footer-back {
+    .footer-desktop {
+      display: none;
+    }
+  }
+  .redesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-back {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer-responsive {
+    width: 100%;
+    padding: 24px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    color: white;
+    .footIzq {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row;
+      width: 100%;
+      gap: 10px;
+      .social-media {
+        display: flex;
+        gap: 15px;
+      }
+    }
+    .logo-footer {
+      height: 150px;
+      width: 150px;
+    }
+    .footDer {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .phone-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
+@media (min-width: 1220px) {
+  .footer-responsive {
+    display: none;
+  }
+  .footer-desktop {
+    display: none;
+  }
+  .footer-back {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 785px) {
+  .footer-desktop {
+    display: none;
+  }
+  .footer-back {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer-responsive {
+    height: auto;
+    padding: 5px 20px;
+    flex-direction: column;
+    gap: 5px !important;
+    .footIzq {
+      display: flex;
+      align-items: center;
+      flex-direction: row !important;
+      .nav-footer {
+        display: flex;
+        flex-direction: column;
+      }
+      .phone-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .social-media {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+    .logo-footer {
+      margin-top: 7px;
+      height: 100px !important;
+      width: 100px !important;
+    }
+    .footIzq {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .redesContainer {
+        display: none;
+      }
+      .phone-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+#UBICACION {
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-linear-gradient(
+    bottom,
+    #614c3b,
+    #7d624f,
+    #614c3b
+  ); //#5c4838
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .center{
+    text-align: center;
+  }
+  .fondo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    position: relative;
+  }
+  iframe {
+    opacity: 90%;
+    min-width: 100%;
+    min-height: 550px;
+    position: relative;
+  }
+}
+
+@media(max-width: 1095px){
+  iframe{
+    height: 300px;
+  }
+}
+
+
