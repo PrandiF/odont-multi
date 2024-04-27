@@ -1,0 +1,39 @@
+.nav-responsive {
+    z-index: 9999;
+    background: -webkit-linear-gradient(top, #000000, #20202000);
+    height: 8rem;
+    .button-nav{
+        .button {
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        place-items: center;
+        background-color: transparent;
+        cursor: pointer;
+        }
+        .button > svg {
+        border-radius: inherit;
+        padding: 0.5rem;
+        fill: #fff;
+        width: 38px;
+        height: 38px;
+        }
+    }
+}
+.offcanvas-body {
+    margin-top: 15px;
+    width: 100vw;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.close-button {
+    color: aliceblue !important;
+}
+.offcanvas {
+    color: aliceblue;
+}

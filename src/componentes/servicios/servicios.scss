@@ -1,0 +1,392 @@
+#SERVICIOS {
+  height: 100vh;
+  width: 100vw;
+  background: #614c3b;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+  .imgBackground {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    filter: blur(0px);
+    box-shadow: 0 -10px 20px rgb(0, 0, 0), 5px 10px 20px rgb(0, 0, 0);
+  }
+  .cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    .cardHidden {
+      display: flex;
+      align-items: end;
+      justify-content: flex-end;
+      border: none;
+      border-radius: 15px;
+      width: 30%;
+      height: 80%;
+      filter: blur(5px) grayscale(50%);
+      transition: filter 0.5s ease-in-out;
+    }
+    .cardVisible {
+      display: flex;
+      align-items: end;
+      justify-content: flex-end;
+      border: none;
+      border-radius: 15px;
+      width: 30%;
+      height: 80%;
+      filter: blur(0);
+      transition: filter 0.5s ease-in-out;
+    }
+    .hairdresserName {
+      font-family: "Roboto", sans-serif;
+    }
+    .infoHoverHidden {
+      opacity: 0;
+      z-index: 100;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(transparent, black);
+      padding: 20px;
+      border-radius: 15px;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .infoHoverVisible {
+      z-index: 100;
+      opacity: 1;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(transparent, black);
+      padding: 20px;
+      border-radius: 15px;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .serviceDescription{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: transparent;
+      backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 10%;
+    }
+    .select {
+      width: 12rem;
+      height: 50px;
+      background: #0000005c;
+      border: 1px solid #b58c6b;
+      color: #b58c6b;
+      backdrop-filter: blur(15px);
+      border-radius: 13px;
+      outline: none;
+      cursor: pointer;
+      font-weight: 700;
+      -webkit-backdrop-filter: grayscale(15px);
+      transition: background 0.3s ease-in-out, border 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    }
+    .select:hover {
+      background: #00000087;
+      border: 1px solid #7d5d42;
+    }
+    .infoMobile {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+// @media (max-width: 1096px) {
+//   #SACARTURNO {
+//     height: 100vh;
+//     width: 100vw;
+//     background: #614c3b;
+//     display: flex;
+//     flex-direction: column;
+//     color: white;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 2rem;
+//     position: relative;
+//   }
+// }
+// @media (max-width: 650px) {
+//   #SACARTURNO {
+//     background: transparent;
+//     padding: 0;
+//     margin: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     position: relative;
+//   }
+// }
+
+//////////////////
+
+#SACARTURNOMODAL {
+  height: 100%;
+  width: 100%;
+  // background: #0000003e;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+}
+
+//cards responsive -> preguntar lucas
+
+// @media (max-width: 900px) {
+//   #SACARTURNO {
+//     height: 100vh;
+//     width: 100vw;
+//     background: #614c3b;
+//     display: flex;
+//     flex-direction: column;
+//     color: white;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 2rem;
+//     position: relative;
+//     .cards {
+//       position: relative;
+//       display: flex;
+//       overflow: hidden;
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: center;
+//       width: 100%;
+//       height: 100%;
+//       gap: 15px;
+//       .cardHidden {
+//         width: 90%;
+//         height: 25vh;
+//         filter: blur(0px) grayscale(0%);
+//       }
+//       .cardVisible {
+//         width: 90%;
+//         height: 25vh;
+//       }
+//       .infoHoverHidden {
+//         display: none;
+//       }
+//       .infoHoverVisible {
+//         display: none;
+//       }
+//       .infoMobile {
+//         width: 100%;
+//         padding: 5px 15px;
+//         display: flex;
+//         justify-content: space-between;
+//         gap: 10px;
+//         align-items: center;
+//         z-index: 100;
+//         .hairdresserName {
+//           padding-top: 5px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (min-width: 901px) {
+  #SERVICIOS {
+    .cardsMobile {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #SERVICIOS {
+    .cards {
+      display: none;
+    }
+    .cardsMobile {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      gap: 15px;
+      .mobileCard {
+        position: relative;
+        display: flex;
+        align-items: end;
+        justify-content: flex-end;
+        border: none;
+        border-radius: 10px;
+        width: 90%;
+        height: 30%;
+        img {
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .select {
+          width: 10rem;
+          height: 40px;
+          background: #0000005c;
+          border: 1px solid #b58c6b;
+          color: #b58c6b;
+          backdrop-filter: blur(15px);
+          border-radius: 13px;
+          outline: none;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 14px;
+          -webkit-backdrop-filter: grayscale(15px);
+          transition: background 0.3s ease-in-out, border 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+        }
+      }
+      .infoMobile {
+        width: 100%;
+        padding: 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+        z-index: 100;
+        background: linear-gradient(transparent, black);
+        border-radius: 10px;
+        .hairdresserName {
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+//preguntar lucas
+@media (max-width: 660px) {
+  #SERVICIOS {
+    .cardsMobile {
+      .mobileCard {
+        .select {
+          width: 9rem;
+          height: 30px;
+          background: #0000005c;
+          border: 1px solid #b58c6b;
+          color: #b58c6b;
+          backdrop-filter: blur(15px);
+          border-radius: 13px;
+          outline: none;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 12px;
+          -webkit-backdrop-filter: grayscale(15px);
+
+          transition: background 0.3s ease-in-out, border 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+        }
+        .select:hover {
+          background: #00000087;
+          border: 1px solid #7d5d42;
+        }
+        .infoMobile {
+          .hairdresserName {
+            padding-top: 5px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//preguntar lucas
+@media (max-width: 400px) {
+  #SERVICIOS {
+    .cardsMobile {
+      .mobileCard {
+        .infoMobile {
+          .hairdresserName {
+            padding-top: 5px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//preguntar lucas
+@media (max-width: 420px) {
+  #SERVICIOS {
+    .cardsMobile {
+      .mobileCard {
+        .select {
+          width: 7rem;
+          height: 30px;
+          background: #0000005c;
+          border: 1px solid #b58c6b;
+          color: #b58c6b;
+          backdrop-filter: blur(15px);
+          border-radius: 13px;
+          outline: none;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 11px;
+          -webkit-backdrop-filter: grayscale(15px);
+          transition: background 0.3s ease-in-out, border 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+        }
+        .infoMobile {
+          .hairdresserName {
+            padding-top: 5px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .textH2 {
+    font-size: 14px;
+  }
+}
